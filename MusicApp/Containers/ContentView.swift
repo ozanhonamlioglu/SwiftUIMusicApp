@@ -18,19 +18,15 @@ struct ContentView: View {
                 ScrollView(.horizontal, showsIndicators: false, content: {
                     LazyHStack {
                         ForEach(albums, id: \.self, content: { album in
-                            AlbumArt(album: album).onTapGesture {
+                            AlbumArt(album: album, isWithText: true).onTapGesture {
                                 self.currentAlbum = album
                             }
                         })
                     }
                 })
                 LazyVStack {
-                    ForEach((currentAlbum?.songs ?? albums.first?.songs) ?? [
-                                Song(name: "Song 1", time: "2:36"),
-                                Song(name: "Song 2", time: "2:36"),
-                                Song(name: "Song 3", time: "2:36"),
-                                Song(name: "Song 4", time: "2:36")], id: \.self, content: { song in
-                            SongCell(song: song)
+                    ForEach((currentAlbum?.songs ?? albums.first?.songs) ?? dummyAlbum[0].songs, id: \.self, content: { song in
+                        SongCell(album: currentAlbum ?? dummyAlbum[0], song: song)
                     })
                 }
             }.navigationTitle(currentAlbum?.name ?? "Welcome")

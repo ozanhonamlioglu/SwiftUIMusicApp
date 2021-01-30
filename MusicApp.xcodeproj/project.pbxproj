@@ -19,6 +19,7 @@
 		BDAF445125C3680E00D06CF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAF445025C3680E00D06CF0 /* Preview Assets.xcassets */; };
 		BDAF445C25C3680F00D06CF0 /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF445B25C3680F00D06CF0 /* MusicAppTests.swift */; };
 		BDAF446725C3680F00D06CF0 /* MusicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF446625C3680F00D06CF0 /* MusicAppUITests.swift */; };
+		BDF8DA2725C5F7B700A464B7 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8DA2625C5F7B700A464B7 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BDAF446225C3680F00D06CF0 /* MusicAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAF446625C3680F00D06CF0 /* MusicAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppUITests.swift; sourceTree = "<group>"; };
 		BDAF446825C3680F00D06CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDF8DA2625C5F7B700A464B7 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,11 +144,11 @@
 		BDAF444825C3680E00D06CF0 /* MusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				BDF8DA2225C5F74A00A464B7 /* Containers */,
 				BD5F26F825C4B46D00518770 /* DummyData */,
 				BD5F26E325C4941300518770 /* Entity */,
 				BD5F26D525C4938E00518770 /* Components */,
 				BDAF444925C3680E00D06CF0 /* MusicAppApp.swift */,
-				BDAF444B25C3680E00D06CF0 /* ContentView.swift */,
 				BDAF444D25C3680E00D06CF0 /* Assets.xcassets */,
 				BDAF445225C3680E00D06CF0 /* Info.plist */,
 				BDAF444F25C3680E00D06CF0 /* Preview Content */,
@@ -178,6 +180,15 @@
 				BDAF446825C3680F00D06CF0 /* Info.plist */,
 			);
 			path = MusicAppUITests;
+			sourceTree = "<group>";
+		};
+		BDF8DA2225C5F74A00A464B7 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				BDAF444B25C3680E00D06CF0 /* ContentView.swift */,
+				BDF8DA2625C5F7B700A464B7 /* PlayerView.swift */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF8DA2725C5F7B700A464B7 /* PlayerView.swift in Sources */,
 				BD5F26ED25C4945F00518770 /* Song.swift in Sources */,
 				BD5F26FA25C4B48500518770 /* DDAlbum.swift in Sources */,
 				BD5F26DF25C493DA00518770 /* SongCell.swift in Sources */,
